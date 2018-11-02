@@ -60,7 +60,7 @@ public class Book {
 
         result = 19 * result + name.hashCode();
         result = 19 * result + Arrays.hashCode(authors);
-        result = 19 * result + (int)price;
+        result = 19 * result + (int)((Double.doubleToLongBits(price))^(Double.doubleToLongBits(price)>>>32));
         result = 19 * result + qty;
 
         return result;

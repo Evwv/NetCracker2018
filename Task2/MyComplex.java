@@ -104,8 +104,8 @@ public class MyComplex {
     public int hashCode() {
         int result = 17;
 
-        result = 19 * result + (int) real;
-        result = 19 * result + (int) imag;
+        result = 19 * result + (int)((Double.doubleToLongBits(real))^(Double.doubleToLongBits(real)>>>32));
+        result = 19 * result + (int)((Double.doubleToLongBits(imag))^(Double.doubleToLongBits(imag)>>>32));
 
         return result;
     }

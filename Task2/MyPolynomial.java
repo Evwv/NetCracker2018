@@ -46,9 +46,8 @@ public class MyPolynomial {
     @Override
     public int hashCode() {
         int result = 17;
-        for (int i = 0; i < coeffs.length; i++) {
-            result = 19 * result + (int)coeffs[i];
-        }
+
+        result = 19 * result + Arrays.hashCode(coeffs);
         return result;
     }
 

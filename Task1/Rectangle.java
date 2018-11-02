@@ -40,8 +40,8 @@ public class Rectangle {
     @Override
     public int hashCode() {
         int result = 17;
-        result = 19 * result + (int) lenght;
-        result = 19 * result + (int) width;
+        result = 19 * result + Float.floatToIntBits(lenght);
+        result = 19 * result + Float.floatToIntBits(width);
 
         return result;
     }

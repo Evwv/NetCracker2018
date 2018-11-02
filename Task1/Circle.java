@@ -36,7 +36,7 @@ public class Circle {
     public int hashCode() {
         int result = 17;
         result = 19 * result + color.hashCode();
-        result = 19 * result + (int)radius;
+        result = 19 * result + (int)((Double.doubleToLongBits(radius))^(Double.doubleToLongBits(radius)>>>32));
         return result;
     }
 

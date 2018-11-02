@@ -76,11 +76,11 @@ public class Ball {
     public int hashCode() {
         int result = 17;
 
-        result = 19 * result + (int)x;
-        result = 19 * result + (int)x;
+        result = 19 * result + Float.floatToIntBits(x);
+        result = 19 * result + Float.floatToIntBits(y);
         result = 19 * result + radius;
-        result = 19 * result + (int)xDelta;
-        result = 19 * result + (int)yDelta;
+        result = 19 * result + Float.floatToIntBits(xDelta);
+        result = 19 * result + Float.floatToIntBits(yDelta);
 
         return result;
     }
